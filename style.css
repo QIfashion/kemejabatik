@@ -19,15 +19,15 @@ nav {
 }
 
 nav img {
-    width: 100px;
+    width: clamp(80px, 15vw, 100px);
 }
 
 nav a {
     text-decoration: none;
     color: black;
-    margin-right: clamp(5px, 2vw, 10px);
+    margin-right: 10px;
     margin-top: 60px;
-    margin-left: clamp(10px, 20vw, 450px);
+    /* margin-left: clamp(10px, 30vw, 100px); */
 }
 
 .container-search {
@@ -36,7 +36,7 @@ nav a {
 
 .search-input {
     margin-top: 48px;
-    width: 200px;
+    width: clamp(150px, 20vw, 200px);
     height: 30px;
     padding: 12px 20px 12px 10px;
     border-radius: 10px;
@@ -57,12 +57,12 @@ main {
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)) ;
     gap: 10px;
 }
 
 .product {
-    max-width: 300px;
+    max-width: 100vh;
     height: auto;
     background-color: white;
     border-radius: 5px;
