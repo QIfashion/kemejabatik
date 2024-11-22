@@ -10,6 +10,33 @@ body {
     align-items: center;
 }
 
+.banner-diskon {
+    width: 100%;
+    max-width: 770px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.banner-diskon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-01 {
+    width: 100%;
+    max-width: 770px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.banner-01 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 nav {
     display: flex;
     border-bottom: 2px solid;
@@ -27,7 +54,16 @@ nav a {
     color: black;
     margin-right: 10px;
     margin-top: 60px;
-    /* margin-left: clamp(10px, 30vw, 100px); */
+    padding: 3px 4px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #3498db;
+    font-size: clamp(11px, 3vw, 15px);
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2980b9;
 }
 
 .container-search {
@@ -52,12 +88,15 @@ nav a {
 
 main {
     margin-top: 10px;
-    max-width: 1200px;
+    max-width: 770px;
 }
 
 .product-container {
+    border-top: 2px solid;
+    margin-top: 50px;
+    padding : 10px 0 0 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
 }
 
@@ -74,13 +113,77 @@ main {
 }
 
 .product img {
-    padding: 8px;
+    padding: 6px;
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.product a {
-    max-width: 200px;
-    font-size: 25px;
+.price-container {
+    font-weight: normal;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.original-price {
+    font-size: clamp(12px, 2vw, 15px);
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount-price {
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.p1 {
+    margin-top: 3px;
+}
+
+.product-judul {
+    font-size: clamp(14px, 2vw, 18px);
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.p2 {
+    margin-top: 7px;
+}
+
+.button-buy {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 15px);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.button-buy:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-buy:focus {
+    outline: none;
+    box-shadow: 0 0 8px 3px rgba(72, 157, 72, 0.8);
+}
+
+.p3 {
+    margin-top: 8px;
 }
