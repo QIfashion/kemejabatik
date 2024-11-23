@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    border-bottom: 2px solid;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(5px, 2vw, 10px);
+    width: 100%;
+    max-width: 1200px;
+}
+
+nav img {
+    width: clamp(80px, 15vw, 100px);
+    margin-right: clamp(85px, 25vw, 300px);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-top: 60px;
+    padding: 3px 4px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #3498db;
+    font-size: clamp(11px, 3vw, 15px);
+    transition: background-color 0.3s ease;
+    margin-left: clamp(90px, 25vw, 300px);
+}
+
+.product {
+    width: 100%;
+    max-width: 770px;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.product img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.judul {
+    text-align: center;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.desckripsi {
+    text-align: left;
+    margin-left: 4px;
+    margin-top : 10px;
+    width: 100%;
+    max-width: 770px;
+    font-size: clamp(13px, 2vw, 17px);
+}
+
+.fitur-utama {
+    padding: 5px;
+    list-style-type: unset;
+}
+
+.container-li {
+    margin-left: 10px;
+    list-style-type: circle;
+    padding: 5px;
+}
+
+.container-size {
+    margin-left: 25px;
+    margin-top: 10px;
+    list-style-type: circle;
+}
+
+.container-btn-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    background-color: #4CAF50;
+    padding: 15px;
+    margin-top: 20px;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 6vw, 30px) clamp(10px, 2vw, 15px) 10px ;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: auto;
+    transition: all 0.3s
+}
+
+.btn-whatsapp:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp:focus {
+    outline: none;
+    box-shadow: 0 0 8px 3px rgba(72, 157, 72, 0.8);
+}
+
+.logo-whatsapp {
+    fill: white;
+    width: clamp(17px, 4vw, 50px);
+    height: clamp(17px, 4vw, 50px)
+}
+
+.text-whatsapp {
+    margin-top: clamp(0px, 1vw, 2px);
+    margin-left: clamp(3px, 2vw, 13px);
+    font-size: clamp(15px, 3vw, 30px);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
