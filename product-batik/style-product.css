@@ -13,7 +13,7 @@ body {
 nav {
     display: flex;
     border-bottom: 2px solid;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
     padding: clamp(5px, 2vw, 10px);
     width: 100%;
@@ -22,7 +22,7 @@ nav {
 
 nav img {
     width: clamp(80px, 15vw, 100px);
-    margin-right: clamp(85px, 25vw, 300px);
+    margin-right: clamp(50px, 16vw, 300px);
 }
 
 nav a {
@@ -35,7 +35,10 @@ nav a {
     background-color: #3498db;
     font-size: clamp(11px, 3vw, 15px);
     transition: background-color 0.3s ease;
-    margin-left: clamp(90px, 25vw, 300px);
+}
+
+.nav-btn-shop {
+    margin-left: clamp(25px, 8.2vw, 210px);
 }
 
 .product {

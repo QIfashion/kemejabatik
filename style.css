@@ -10,6 +10,55 @@ body {
     align-items: center;
 }
 
+.nav-top {
+    display: flex;
+    border-bottom: 2px solid;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(5px, 2vw, 10px);
+}
+
+.nav-top img {
+    width: clamp(80px, 15vw, 100px);
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    margin-top: 60px;
+    padding: 3px 4px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #3498db;
+    font-size: clamp(11px, 3vw, 15px);
+    transition: background-color 0.3s ease;
+}
+
+.nav-top a:hover {
+    background-color: #2980b9;
+}
+
+.container-search {
+    position: relative;
+}
+
+.search-input {
+    margin-top: 48px;
+    width: clamp(150px, 20vw, 200px);
+    height: 30px;
+    padding: 12px 20px 12px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    margin-top: 52px;
+    margin-left: 6px;
+}
+
 .banner-diskon {
     width: 100%;
     max-width: 770px;
@@ -37,55 +86,6 @@ body {
     object-fit: cover;
 }
 
-nav {
-    display: flex;
-    border-bottom: 2px solid;
-    justify-content: space-between;
-    align-items: center;
-    padding: clamp(5px, 2vw, 10px);
-}
-
-nav img {
-    width: clamp(80px, 15vw, 100px);
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-    margin-top: 60px;
-    padding: 3px 4px;
-    color: #ffffff;
-    border-radius: 5px;
-    background-color: #3498db;
-    font-size: clamp(11px, 3vw, 15px);
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #2980b9;
-}
-
-.container-search {
-    position: relative;
-}
-
-.search-input {
-    margin-top: 48px;
-    width: clamp(150px, 20vw, 200px);
-    height: 30px;
-    padding: 12px 20px 12px 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    outline: none;
-}
-
-.search-icon {
-    position: absolute;
-    margin-top: 52px;
-    margin-left: 6px;
-}
-
 main {
     margin-top: 10px;
     max-width: 770px;
@@ -94,7 +94,7 @@ main {
 .product-container {
     border-top: 2px solid;
     margin-top: 50px;
-    padding : 10px 0 0 0;
+    padding: 10px 0 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
@@ -186,4 +186,190 @@ main {
 
 .p3 {
     margin-top: 8px;
+}
+
+.text-testimoni {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid;
+    padding: 5px;
+}
+
+.container-testimoni {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.testimoni {
+    overflow: hidden;
+    max-width: 770px;
+}
+
+.testimoni img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container-ambil-promo {
+    margin-top: 50px;
+    text-align: center;
+    font-size: clamp(24px, 2vw, 30px);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: clamp(60px, 20vw, 90px);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+}
+
+.btn-ambil-promo {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4CAF50;
+    padding: 10px 25px;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.4s ease;
+    border: 1px solid;
+    border-color: black
+}
+
+.btn-ambil-promo:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-countdown {
+    text-align: center;
+    display: block;
+    padding: clamp(20px, 10vw, 40px) 0px; 
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2C3E50;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+
+.container-countdown h2 {
+    color: #BDC3C7;
+    object-fit: cover;
+    font-size: clamp(20px, 3vw, 24px);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+}
+
+.time {
+    margin-top: 14px;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: clamp(16px, 2vw, 20px);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.container-footer {
+    display: flex;
+    background-color: #0b1e2d;
+    color: white;
+    height: clamp(220px, 50vw, 300px);
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 100px;
+    border-top: 7px solid #2b0494;
+}
+
+.container-left {
+    padding: 20px clamp(20px, 3vw, 50px) 0px 10px;
+    border-right: 2px solid  #2C3E50;
+}
+
+.container-left img {
+    margin-left: clamp(35px, 5vw, 100px);
+    width: clamp(50px, 17vw, 110px);
+    background-color: white;
+    border-radius: 100px;
+}
+
+.container-left h4 {
+    padding: clamp(10px, 2vw, 20px) 0 0 0;
+    margin-left: 1px;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.container-about {
+    margin-top: 10px;
+}
+
+.container-about a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 17px;
+}
+
+.btn-contact-us {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: clamp(12px, 2vw, 30px);
+    margin-left: clamp(9px, 3vw, 50px);
+    background-color: #7777;
+    padding: clamp(5px, 2vw, 10px) clamp(10px, 2vw, 20px) clamp(5px, 2vw, 10px) clamp(7.5px, 2vw, 15px);
+    border-radius: 100px;
+}
+
+.logo-btn-contact-us {
+    width: clamp(100px, 10vw, 150px);
+}
+
+.container-logo {
+    margin-top: 35px;
+    margin-left: clamp(1px, 2vw, 20px);
+    gap: 100px;
+}
+
+.logo-shopee {
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
+    margin-left: 7px;
+}
+
+.logo-facebook {
+    margin-left: 5px;
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
+}
+
+.logo-lazada {
+    margin-left: 10px;
+    width: clamp(50px, 10vw, 70px);
+    height: clamp(50px, 10vw, 70px);
 }
