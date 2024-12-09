@@ -18,9 +18,17 @@
         </nav>
 
         <main>
-            <div class="product">
-                <img src="../foto/batik-08.jpg" alt="">
+            <div class="image-scroll-container">
+                <div class="image-scroll">
+                    <img src="../foto/batik-08.jpg" onclick="openFullscreen(this)" alt="">
+                    <img src="../foto/Batik-makna/Keterangan-08.png" onclick="openFullscreen(this)" alt="">
+                </div>
             </div>
+
+            <div id="fullscreenModal" class="fullscreen-model" onclick="closeFullscreen()">
+                <img id="fullscreenImage" alt="">
+            </div>
+
             <div>
                 <h2 class="judul">Kemeja batik cendrawasih hitam</h2>
                 <div class="desckripsi"><strong>Kemeja batik</strong> lengan panjang ini menggabungkan warisan budaya
@@ -94,11 +102,43 @@
                         <div class="text-whatsapp">WhatsApp</div>
                     </a>
                 </div>
-            </div>
+                <div class="container-shopee-lazada">
+                    <a href="" class="btn-shopee"> <svg class="logo-shopee" width="50px" height="50px"
+                            viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path fill="#ffff"
+                                d="m29.004 157.064 5.987-.399-5.987.399ZM22 52v-6a6 6 0 0 0-5.987 6.4L22 52Zm140.996 105.064-5.987-.399 5.987.399ZM170 52l5.987.4A6 6 0 0 0 170 46v6ZM34.991 156.665 27.987 51.601l-11.974.798 7.005 105.064 11.973-.798Zm133.991.798 7.005-105.064-11.974-.798-7.004 105.064 11.973.798Zm-11.973-.798a10 10 0 0 1-9.978 9.335v12c11.582 0 21.181-8.98 21.951-20.537l-11.973-.798Zm-133.991.798C23.788 169.02 33.387 178 44.968 178v-12a10 10 0 0 1-9.977-9.335l-11.973.798ZM74 48c0-12.15 9.85-22 22-22V14c-18.778 0-34 15.222-34 34h12Zm22-22c12.15 0 22 9.85 22 22h12c0-18.778-15.222-34-34-34v12ZM22 58h148V46H22v12Zm22.969 120H147.03v-12H44.969v12Z" />
+                            <path stroke="#ffff" stroke-linecap="round" stroke-width="12"
+                                d="M114 84H88c-7.732 0-14 6.268-14 14v0c0 7.732 6.268 14 14 14h4m-2 0h14c7.732 0 14 6.268 14 14v0c0 7.732-6.268 14-14 14H78" />
+                        </svg>
+                        <div class="text-shopee">Shopee</div>
+                    </a>
+                    <a href="" class="btn-lazada">
+                        <svg class="logo-lazada" height="32" width="45" viewBox="0 0 90 50"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.001" x2="66.758" y1=".5"
+                                y2="-.017">
+                                <stop offset="0" stop-color="#ffb900" />
+                                <stop offset=".338" stop-color="#f38000" />
+                                <stop offset=".567" stop-color="#f83c72" />
+                                <stop offset=".78" stop-color="#fc1cbe" />
+                                <stop offset=".93" stop-color="#fe08ed" />
+                                <stop offset="1" stop-color="#f0f" />
+                            </linearGradient>
+                            <g fill="#000083" stroke-linecap="square" stroke-linejoin="bevel">
+                                <path
+                                    d="M33.737 54.716c-.479.003-.95-.12-1.366-.355-3.565-2.063-29.967-18.617-30.964-19.122A2.39 2.39 0 0 1 .04 33.327v-23.22A2.513 2.513 0 0 1 1.175 7.95l.19-.109C3.92 6.256 12.47 1.038 13.823.287A2.05 2.05 0 0 1 14.847 0c.338.004.67.088.97.246 0 0 11.964 7.799 13.795 8.495a9.438 9.438 0 0 0 4.097.86 9.178 9.178 0 0 0 4.59-1.12C40.087 7.54 51.52.288 51.642.288c.288-.174.62-.264.956-.26.361.002.715.101 1.024.287 1.557.86 12.156 7.348 12.607 7.635a2.458 2.458 0 0 1 1.188 2.131V33.3a2.363 2.363 0 0 1-1.365 1.912c-.997.546-27.317 17.1-30.95 19.122a2.732 2.732 0 0 1-1.366.382"
+                                    fill="url(#a)" transform="translate(0) scale(1)" />
+                            </g>
+                            <text x="17" y="30" font-family="Arial" font-size="18" fill="#fff">LAZ</text>
+                        </svg>
+                        <div class="text-lazada">lazada</div>
+                    </a>
+                </div>
         </main>
     </div>
 
     <script src="../random-product.js"></script>
+    <script src="product.js"></script>
 </body>
 
 </html>

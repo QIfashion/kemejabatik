@@ -34,4 +34,45 @@ function updateCountdown() {
     }
 }
 
-const countdownInterval = setInterval(updateCountdown, 1000)
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+let notifElement = Array.from(document.querySelectorAll('.notif'));
+let remainingNotif = [...notifElement];
+let cooldownTime = 10 * 60 * 1000;
+
+function showNotification() {
+    if (remainingNotif.length === 0) {
+        setTimeout(() => {
+            remainingNotif = [...notifElement];
+        }, cooldownTime);
+        return;
+    }
+
+    let randomIndex = Math.floor(Math.random() * notifElement.length);
+    let selectedNotif = notifElement[randomIndex];
+
+    selectedNotif.classList.add('show');
+
+    setTimeout(() => {
+        selectedNotif.classList.remove('show');
+    }, 3000)
+
+    remainingNotif.splice(randomIndex, 1);
+}
+
+setInterval(showNotification, 10000)
+
+let lastScrollTop = 0;
+let notifContainer = document.querySelector('.container-notif');
+
+window.addEventListener ('scroll', () => {
+    let currentScrollTop = window.scrollY;
+
+    if (currentScrollTop > lastScrollTop) {
+        notifContainer.classList.add('scrolled');
+    } else {
+        notifContainer.classList.remove('scrolled');
+    }
+
+    lastScrollTop = currentScrollTop;
+});

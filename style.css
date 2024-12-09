@@ -59,6 +59,82 @@ body {
     margin-left: 6px;
 }
 
+.container-notif {
+    position: relative;
+    padding: 5px;
+}
+
+.notif {
+    position: fixed;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    right: -300px;
+    display: flex;
+    gap: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1px;
+    transition: margin-top 0.3s ease, opacity 0.3s ease;
+}
+
+.notif.scrolled {
+    margin-top: -30px;
+    opacity: 0.5;
+}
+
+.text-notifikasi {
+    font-size: clamp(10px, 2vw, 17px);
+    margin-top: clamp(10px, 1.2vw, 10px);
+}
+
+.notif img {
+    border-radius: 30%;
+    width: clamp(30px, 2vw, 45px);
+    height: clamp(30px, 2vw, 45px);
+    object-fit: cover;
+}
+
+@keyframes slideIn {
+    0% {
+        right: -300px;
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50% {
+        right: 15px;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        right: 15px;
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 15px;
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        right: -300px;
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.notif.show {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.notif.hide {
+    animation: slideOut 0.8s ease-in forwards;
+}
+
 .banner-diskon {
     width: 100%;
     max-width: 770px;
@@ -232,9 +308,12 @@ main {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(0deg);
     }
@@ -261,7 +340,7 @@ main {
 .container-countdown {
     text-align: center;
     display: block;
-    padding: clamp(20px, 10vw, 40px) 0px; 
+    padding: clamp(20px, 10vw, 40px) 0px;
     justify-content: center;
     max-width: 400px;
     width: 100%;
@@ -308,7 +387,7 @@ main {
 
 .container-left {
     padding: 20px clamp(20px, 3vw, 50px) 0px 10px;
-    border-right: 2px solid  #2C3E50;
+    border-right: 2px solid #2C3E50;
 }
 
 .container-left img {
